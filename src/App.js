@@ -1,11 +1,12 @@
 import React from 'react'
 import { userContext } from './context'
-import Content from './context-content';
+import Headers2 from './context-header2'
 
 function App() {
+  let [user,setUser]=React.useState('')
   return (
-   <userContext.Provider value={'thepnimit'}>
-    <Content/>
+   <userContext.Provider value={[user,setUser]}>
+    <Headers2/>
    </userContext.Provider>
   );
 }
